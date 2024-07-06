@@ -40,6 +40,7 @@ export async function POST(req: Request) {
       }
 
       const billingAddress = session.customer_details!.address;
+      // @ts-ignore
       const shippingAddress = session.shipping!.address;
 
       const updatedOrder = await db.order.update({
