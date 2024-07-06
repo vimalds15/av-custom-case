@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import Dropzone, { FileRejection } from "react-dropzone";
 
-const page = () => {
+const UploadPage = () => {
   const { toast } = useToast();
   const [isDragOver, setIsDragOver] = useState(false);
   const [uploadProgress, setUploadProgress] = useState<number>(0);
@@ -113,4 +113,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default UploadPage;

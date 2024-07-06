@@ -4,7 +4,7 @@ import Phone from "@/components/Phone";
 import { Button } from "@/components/ui/button";
 import { BASE_PRICE, PRODUCT_PRICES } from "@/config/products";
 import { cn, formatPrice } from "@/lib/utils";
-import { COLORS, FINISHES, MODELS } from "@/validators/option-validator";
+import { COLORS, MODELS } from "@/validators/option-validator";
 import { Configuration } from "@prisma/client";
 import { useMutation } from "@tanstack/react-query";
 import { ArrowRight, Check } from "lucide-react";
@@ -26,7 +26,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
   useEffect(() => {
     setShowConfetti(true);
-  });
+  }, []);
 
   const { color, model, finish, material, id } = configuration;
   const tw = COLORS.find(
